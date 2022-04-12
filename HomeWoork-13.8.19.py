@@ -1,10 +1,10 @@
-ticket_number = int(input('Сколько билетов вы хотите приобрести на мероприятие? '))
+ticket_number = int(input('Какое количество билетов на конференцию вы хотите приобрести? : '))
 price_ticket = 0
 for i in range(ticket_number):
     i += 1
     while True:
         try:
-            age = int(input('Укажите возраст:'))
+            age = int(input('Возраст посетителя? :'))
             if age < 18:
                 print('Билет бесплатный')
             elif 18 <= age <= 25:
