@@ -1,10 +1,13 @@
-def check_palindrome(str_):
-   str_ = str_.lower()
-   str_ = str_.replace(" ", "")
+def filter(func, cont):
+    outp = []
+    for x in cont: # проходим циклом по итерируемому объекту
+        if func(x): # проверяем условие для каждого элемента
+            outp.append(x) # если True, добавляем в новый список
+    return outp
+def positive(x):
+    return x %2 == 0  #
 
-   if str_ == str_[::-1]:
-       print('True')
-   else:
-       print('False')
+result = filter(positive, [-2, -1, 0, 1, -3, 2, -3])
 
-check_palindrome('Не романтичное тру')
+# Возвращается итератор, т.е. перечисляйте или приводите к списку
+print(list(result))   # [1, 2]
