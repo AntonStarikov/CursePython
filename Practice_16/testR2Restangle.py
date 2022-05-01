@@ -1,6 +1,6 @@
-from restangle import Restangle
+from rectangle import Rectangle
 
-r2 = Restangle(15,10)
+r2 = Rectangle(15,10)
 
 print('r2.width=', r2.width)
 print('r2.heidht=', r2.heidht)
