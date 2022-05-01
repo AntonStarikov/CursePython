@@ -1,14 +1,14 @@
 class Rectangle:
     def __init__(self, width, height):
-        self.widht = widht
+        self.width = width
         self.heidht = height
 
-    def getWidht(self):
-        return self.widht
+    def getWidth(self):
+        return self.width
 
     def getHeidht(self):
         return self.heidht
 
     # Метод расчитывающий площадь
     def getArea(self):
-        return self.widht * self.heidht
+        return self.width * self.heidht
