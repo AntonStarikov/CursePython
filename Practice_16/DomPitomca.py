@@ -1,11 +1,11 @@
 class Cat:
-    def __init__(self, breed, gender, age):
-        self.breed = breed
+    def __init__(self, name, gender, age):
+        self.name = name
         self.gender = gender
         self.age = age
 
-    def getBreed(self):
-        return self.breed
+    def getName(self):
+        return self.name
 
     def getGender(self):
         return self.gender
