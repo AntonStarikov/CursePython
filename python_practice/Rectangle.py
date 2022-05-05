@@ -3,5 +3,5 @@ class Rectangle:
         self.a = a
         self.b = b
 
-    def getArea(self):
+    def get_area(self):
         return self.a * self.b
