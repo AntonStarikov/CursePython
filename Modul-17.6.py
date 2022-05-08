@@ -40,7 +40,7 @@ class LinkedList:  # класс списка
         else:
             new_node = Node(value)
             self.last.next = new_node
-            self.first = new_node
+            self.last = new_node
 
     def popleft(self):
         if self.first is None:  # если список пустой, возвращаем None
