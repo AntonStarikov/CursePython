@@ -54,13 +54,13 @@ def binary_search(L, element, left, right):
 
 while True:
     try:
-        element = int(input("Введите число от 0 до 100:"))
-        if element < 0 or element > 999:
+        element = int(input('Введите число от 0 до 100:'))
+        if element < 0 or element > 100:
             raise Exception
         break
     except ValueError:
-        print("Нужно ввести число!")
+        print('Нужно ввести число!')
     except Exception:
-        print("Неправильный диапазон!")
+        print('Неправильный диапазон!')
 
-print(binary_search(L, element, 0, len(L)))
+print('Номер позиции искомого числа массива: ', binary_search(L, element, 0, len(L)))
