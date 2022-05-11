@@ -1,5 +1,5 @@
 array = input('Введите числа через пробел от 0 до 100: ').split()
-L = list(map(int, array)) # преобразовываем последовательность в список
+L = list(map(int, array))  # преобразовываем последовательность в список
 
 def merge_sort(L):  # "разделяй"
     if len(L) < 2:  # если кусок массива равен 2,
@@ -35,7 +35,7 @@ def merge(left, right):  # "властвуй"
 
     return result
 print('Отсортированный массив:', merge_sort(L))
-print('Длинна массива', len(merge_sort(L)))
+print('Количество элементов в  массиве:', len(merge_sort(L)))
 
 
 
@@ -63,4 +63,4 @@ while True:
     except Exception:
         print('Неправильный диапазон!')
 
-print('Номер в списке:', int(binary_search(L, element, 0, len(L))))
+print(binary_search(L, element, 0, len(L)))
