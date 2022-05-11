@@ -63,4 +63,4 @@ while True:
     except Exception:
         print('Неправильный диапазон!')
 
-print('Номер позиции искомого числа массива: ', binary_search(L, element, 0, len(L)))
+print('Номер в списке:', int(binary_search(L, element, 0, len(L))))
