@@ -54,7 +54,7 @@ def binary_search(L, element, left, right):
 
 while True:
     try:
-        element = int(input('Введите число от 0 до 100:'))
+        element = int(input('Введите число от 0 до 100: '))
         if element < 0 or element > 100:
             raise Exception
         break
