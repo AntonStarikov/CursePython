@@ -1,5 +1,5 @@
-array = '1 5 3 9 8 4 2 6 7 8 2 6'
-L = list(array.split()) # преобразовываем последовательность в список
+array = input('Введите числа через пробел: ').split()
+L = list(map(int, array)) # преобразовываем последовательность в список
 
 def merge_sort(L):  # "разделяй"
     if len(L) < 2:  # если кусок массива равен 2,
@@ -55,7 +55,7 @@ def binary_search(L, element, left, right):
 while True:
     try:
         element = int(input("Введите число:"))
-        if element > len(merge_sort(L)):
+        if element < 0 or element > 999:
             raise Exception
         break
     except ValueError:
@@ -63,4 +63,4 @@ while True:
     except Exception:
         print("Неправильный диапазон!")
 
-print(binary_search(L, element, 0, len(merge_sort(L))))
+print(binary_search(L, element, 0, len(L)))
