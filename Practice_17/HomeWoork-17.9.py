@@ -1,4 +1,4 @@
-array = input('Введите числа через пробел: ').split()
+array = input('Введите числа через пробел от 0 до 100: ').split()
 L = list(map(int, array)) # преобразовываем последовательность в список
 
 def merge_sort(L):  # "разделяй"
@@ -43,7 +43,7 @@ def binary_search(L, element, left, right):
     if left > right:  # если левая граница превысила правую,
         return False  # значит элемент отсутствует
 
-    middle = (right + left) // 2  # находимо середину
+    middle = (right + left) // 2  # находим середину
     if L[middle] == element:  # если элемент в середине,
         return middle  # возвращаем этот индекс
     elif element < L[middle]:  # если элемент меньше элемента в середине
@@ -54,7 +54,7 @@ def binary_search(L, element, left, right):
 
 while True:
     try:
-        element = int(input("Введите число:"))
+        element = int(input("Введите число от 0 до 100:"))
         if element < 0 or element > 999:
             raise Exception
         break
