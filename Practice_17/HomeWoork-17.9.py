@@ -35,7 +35,7 @@ def merge(left, right):  # "властвуй"
 
     return result
 print('Отсортированный массив:', merge_sort(L))
-print('Длинны массива', len(merge_sort(L)))
+print('Длинна массива', len(merge_sort(L)))
 
 
 
