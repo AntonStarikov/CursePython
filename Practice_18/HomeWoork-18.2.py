@@ -1,16 +1,10 @@
-import telebot
-from telebot import TeleBot
+import requests
+import lxml.html
+from lxml import etree
 
-TOKEN = "5313606339:AAGQK-c56x13G3bA-nJzDr-WXNkRjXuW-F4"
+tree = etree.parse('Welcome to Python.org.html', lxml.html.HTMLParser())
+ul = tree.findall('//*[@id="content"]/div/section/div[3]/div[1]/div/ul/li[3]')
 
-bot: TeleBot = telebot.TeleBot(TOKEN)
-
-@bot.message_handler(commands=['start', 'help'])
-def send_welcome(message):
-    bot.send_message(message.chat.id, f"Приветствую, {message.chat.username}")
-
-@bot.message_handler(content_types=['photo',])
-def massage_photo(message: telebot.types.Message):
-    bot.reply_to(message,'Nice meme XDD')
-
-bot.polling(none_stop=True)
+for li in ul:
+    a = li.find('a')
+    print(a.text)
