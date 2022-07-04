@@ -21,7 +21,7 @@ def test_search_example(selenium):
 
     # Click Search:
     search_button = selenium.find_element_by_name('btnK')
-    search_button.submit()
+    search_button.click()
 
     time.sleep(10)  # just for demo purposes, do NOT repeat it on real projects!
 
